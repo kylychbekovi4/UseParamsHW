@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+
+.Parent {
+}
+
+.parent {
+	width: 100%;
+	height: 150px;
+	background: -webkit-linear-gradient(
+		45deg,
+		#f09433 0%,
+		#e6683c 25%,
+		#dc2743 50%,
+		#cc2366 75%,
+		#bc1888 100%
+	);
+	background: linear-gradient(
+		45deg,
+		#f09433 0%,
+		#e6683c 25%,
+		#dc2743 50%,
+		#cc2366 75%,
+		#bc1888 100%
+	);
+
+	p {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px 0;
+		font-family: "Protest Riot", sans-serif;
+		font-size: 70px;
+		font-weight: 900;
+	}
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 500px;
+
+	button {
+		width: 400px;
+		height: 100px;
+		font-weight: 900;
+		border-radius: 20px;
+		border: none;
+		background: -webkit-linear-gradient(
+			45deg,
+			#f09433 0%,
+			#e6683c 25%,
+			#dc2743 50%,
+			#cc2366 75%,
+			#bc1888 100%
+		);
+		background: linear-gradient(
+			45deg,
+			#f09433 0%,
+			#e6683c 25%,
+			#dc2743 50%,
+			#cc2366 75%,
+			#bc1888 100%
+		);
+	}
+}
+
+.img {
+	img {
+		width: 100%;
+		max-width: 600px;
+		height: auto;
+	}
+}
+
+.papa {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 40px;
+}
+
+// !
+
+.father {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.loader {
+	display: flex;
+	position: relative;
+	justify-items: center;
+	align-items: center;
+	gap: 1rem;
+	height: 55px;
+	width: 200px;
+	overflow: hidden;
+	// justify-content: center;
+	// align-items: center;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 200px;
+	position: relative;
+	align-items: center;
+}
+
+.carousel {
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+	position: absolute;
+	width: 100%;
+	transform-origin: center;
+	animation-delay: 2s;
+}
+
+.loader .container:nth-child(3) {
+	justify-content: flex-start;
+	justify-items: flex-start;
+	animation: scroll-up 4s infinite ease-in-out;
+	animation-delay: 3s;
+}
+
+.loader .container:nth-child(2) {
+	justify-content: flex-end;
+	justify-items: flex-end;
+	animation: scroll-down 4s infinite ease-in-out;
+	animation-delay: 3s;
+}
+
+.loader .container:nth-child(1) {
+	justify-content: flex-end;
+	justify-items: flex-end;
+	animation: scroll-down 3s infinite ease-in-out;
+	animation-delay: 3s;
+}
+
+.love {
+	background: red;
+	display: flex;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	left: 8px;
+	margin: 0.8rem 4px;
+	transform: rotate(45deg);
+	animation-delay: 2s;
+}
+
+.love::before,
+.love::after {
+	content: "";
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: red;
+}
+
+.love::before {
+	left: -16px;
+}
+
+.love::after {
+	top: -16px;
+}
+
+.death {
+	display: flex;
+	width: 100%;
+	height: 55px;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	animation: rotation 3s infinite ease-in-out;
+	animation-delay: 1s;
+}
+
+.death:after {
+	content: "";
+	height: 63px;
+	position: absolute;
+	border-left: 12px solid red;
+	transform: rotate(45deg);
+	border-radius: 8px;
+	top: -4px;
+}
+
+.death:before {
+	content: "";
+	height: 60px;
+	position: absolute;
+	border-left: 12px solid red;
+	transform: rotate(-45deg);
+}
+
+.loader:hover {
+	animation: none;
+}
+
+.robots {
+	display: flex;
+	width: 100%;
+	height: 55px;
+	justify-content: space-between;
+	background-color: #ff0000;
+	border-radius: 0 8px 8px;
+	padding: 8px;
+	animation-delay: 5s;
+}
+
+.robots::after {
+	content: "";
+	width: 12px;
+	height: 12px;
+	top: 0;
+	left: 0;
+	background-color: #ffffff;
+	border-radius: 50%;
+	animation-delay: 2s;
+	animation: blink 0.5s 2 forwards;
+}
+
+.robots::before {
+	content: "";
+	width: 12px;
+	height: 12px;
+	top: 0;
+	left: 0;
+	background-color: #ffffff;
+	border-radius: 50%;
+	animation-delay: 2s;
+	animation: blink 0.5s 2 forwards;
+}
+
+@keyframes scroll-up {
+	0% {
+		transform: translateY(0);
+		filter: blur(0);
+	}
+
+	30% {
+		transform: translateY(-150%);
+		filter: blur(10px);
+	}
+
+	60% {
+		transform: translateY(0);
+		filter: blur(0px);
+	}
+}
+
+@keyframes scroll-down {
+	0% {
+		transform: translateY(0);
+		filter: blur(0);
+	}
+
+	30% {
+		transform: translateY(150%);
+		filter: blur(10px);
+	}
+
+	60% {
+		transform: translateY(0);
+		filter: blur(0px);
+	}
+}
+
+@keyframes rotation {
+	20%,
+	100% {
+		transform: rotate(180deg);
+	}
+}
+
+@keyframes blink {
+	0% {
+		height: 0;
+	}
+
+	20% {
+		height: 12px;
+	}
+
+	100% {
+		height: 12px;
+	}
+}
